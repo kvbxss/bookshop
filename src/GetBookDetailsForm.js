@@ -8,7 +8,7 @@ const GetBookDetailsForm = ({ bookId }) => {
     const fetchBookDetails = async () => {
       try {
         const response = await axios.get(
-          `https://localhost:7140/api/Books/${bookId}`
+          `https://localhost:7140/api/books/${bookId}`
         );
         setBookDetails(response.data);
       } catch (error) {

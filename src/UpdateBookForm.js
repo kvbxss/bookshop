@@ -18,8 +18,8 @@ const UpdateBookForm = ({ bookId, onUpdateBook }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.patch(
-        `https://localhost:7140/api/Books/${bookId}`,
+      const response = await axios.put(
+        `https://localhost:7140/api/books/${bookId}`,
         updatedBook
       );
       onUpdateBook(response.data);
